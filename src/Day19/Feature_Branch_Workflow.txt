@@ -1,0 +1,22 @@
+ pwd
+ rm -rf .git main.py plots.py
+ git init
+ echo "Stable project code" > main.py
+ git add main.py
+ git commit -m "Initial stable code"
+ git branch
+ git switch -c feature-viz
+ echo 'print("Visualization experiment")' > plots.py
+ git add plots.py
+ git commit -m "Added visualization feature"
+ 
+ ls
+ main.py  plots.py
+
+ git switch master
+ ls
+ 
+
+ git switch feature-viz
+ ls
+ 

@@ -1,0 +1,14 @@
+git switch master
+echo "Line written by MAIN developer" > main.py
+git add main.py
+git commit -m "Main edited first line"
+git switch feature-viz
+echo "Line written by FEATURE developer" > main.py
+git add main.py
+git commit -m "Feature edited first line"
+git switch master
+git merge feature-viz
+cat main.py
+nano main.py
+git add main.py
+git commit -m "Resolved merge conflict"
